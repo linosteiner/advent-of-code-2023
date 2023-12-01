@@ -28,10 +28,8 @@ public class Puzzle2 {
         Stream<String> replacedLines = lines.stream()
                 .map(line -> {
                     for (String word : NUMBER_STRINGS) {
-                        System.out.println(DIGIT_MAP.get(word));
                         line = line.replace(word, String.valueOf(DIGIT_MAP.get(word)));
                     }
-                    System.out.println(line);
                     return line;
                 });
 
