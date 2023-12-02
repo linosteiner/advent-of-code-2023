@@ -2,11 +2,13 @@ package day1;
 
 import util.FileReader;
 
+import java.nio.file.Path;
 import java.util.List;
 
 public class Puzzle1 {
 
     public static void run() {
+        FileReader.setPath(Path.of("resources/input_day1.txt"));
         List<String> fileLines = FileReader.getFileLines();
         extractDigits(fileLines);
     }

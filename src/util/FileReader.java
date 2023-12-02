@@ -8,7 +8,7 @@ import java.util.List;
 
 public class FileReader {
 
-    private static final Path filePath = Path.of("resources/input.txt");
+    private static Path path;
 
     public static List<String> getFileLines() {
         try {
@@ -19,7 +19,11 @@ public class FileReader {
     }
 
     private static List<String> readFile() throws IOException {
-        return Files.readAllLines(filePath, StandardCharsets.UTF_8);
+        return Files.readAllLines(path, StandardCharsets.UTF_8);
+    }
+
+    public static void setPath(Path path) {
+        FileReader.path = path;
     }
 }
 

@@ -2,6 +2,7 @@ package day1;
 
 import util.FileReader;
 
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -23,6 +24,7 @@ public class Puzzle2 {
     );
 
     public static void run() {
+        FileReader.setPath(Path.of("resources/input_day1.txt"));
         List<String> lines = FileReader.getFileLines();
 
         Stream<String> replacedLines = lines.stream()
