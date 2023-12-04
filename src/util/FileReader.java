@@ -12,14 +12,10 @@ public class FileReader {
 
     public static List<String> getFileLines() {
         try {
-            return readFile();
+            return Files.readAllLines(path, StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    private static List<String> readFile() throws IOException {
-        return Files.readAllLines(path, StandardCharsets.UTF_8);
     }
 
     public static void setPath(Path path) {

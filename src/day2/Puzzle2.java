@@ -19,6 +19,7 @@ public class Puzzle2 {
         lines.forEach(line -> games.add(GameHelper.convertGameString(line)));
         games.forEach(Puzzle2::findLargestColourQuantity);
         System.out.printf("The power of all the sets is %s", sumOfPowerOfAllSets);
+        System.out.println();
 
     }
 
